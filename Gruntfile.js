@@ -4,10 +4,11 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	var config = {
 		pkg: grunt.file.readJSON('package.json'),
-		clean: ["dev"],
+		clean: ["dev", "release"],
 		jshint: {
 			all: ['client/app/**/*.js']
 		},
@@ -29,6 +30,18 @@ module.exports = function (grunt) {
 						dest: 'dev/index.html'
 					}
 				]
+			}
+		},
+		watch: {
+			client: {
+				files: ['client/app/**/*.js', 'client/css/**/*.js', 'client/*.html'],
+				tasks: ['dev'],
+				options: {
+					spawn: false,
+				},
+			},
+			tests: {
+				// TODO
 			}
 		},
 		requirejs: {
@@ -57,5 +70,6 @@ module.exports = function (grunt) {
 	grunt.initConfig(config);
 
 	// Tasks
-	grunt.registerTask('default', ['clean', 'jshint', 'copy:dev', 'requirejs:dev']);
+	grunt.registerTask('dev', ['clean', 'jshint', 'copy:dev', 'requirejs:dev', 'watch:client']);
+	grunt.registerTask('default', ['dev']);
 }

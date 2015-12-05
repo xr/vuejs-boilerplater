@@ -18,6 +18,11 @@ To trigger **release** build
 
     > grunt release
 
+Watch files changes
+
+    > grunt watch
+
+
 ## Kick Off the Server
 
     > npm start
