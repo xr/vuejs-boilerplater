@@ -1,0 +1,32 @@
+{
+  "name": "backbonejs-boilerplate",
+  "version": "0.0.1",
+  "description": "bower,grunt,requirejs,sass,backbonejs,jasmine boilerplate",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "prestart": "echo hello prestart",
+    "start": "node ./server/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "liang guo <guoliang1222@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-clean": "^0.7.0",
+    "grunt-contrib-copy": "^0.8.2",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-contrib-requirejs": "^0.4.4"
+  },
+  "dependencies": {
+    "express": "^4.13.3"
+  },
+  "keywords": [
+    "backbonejs-boilerplate",
+    "boilerplate",
+    "backbonejs",
+    "boilerplate"
+  ]
+}

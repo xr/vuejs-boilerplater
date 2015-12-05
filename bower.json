@@ -1,0 +1,28 @@
+{
+  "name": "SPA-boilerplate",
+  "authors": [
+    "liang guo <guoliang1222@gmail.com>"
+  ],
+  "description": "SPA boilerplate",
+  "main": "",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "src/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "requirejs": "~2.1.22"
+  },
+  "devDependencies": {
+    "text": "requirejs-text#~2.0.14"
+  }
+}
