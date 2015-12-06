@@ -1,7 +1,12 @@
-define(['text!views/site_layout.html'], function (site_layout_v) {
-	function App() {
-		console.log('Hello tpl', site_layout_v);
-	}
+define(['text!views/site_layout.html', 'Vue'], function (site_layout_v, Vue) {
+	var Layout = Vue.extend({
+		template: site_layout_v,
+		data: function () {
+			return {
+				message: 'hello world'
+			};
+		}
+	});
 
-	return App;
+	return Layout;
 });

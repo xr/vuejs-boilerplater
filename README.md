@@ -1,6 +1,6 @@
-# Backbonejs boilerplate - Grunt Bower + RequireJS + SASS + Jasmine Boilerplate
+# Vuejs boilerplate - Grunt Bower + RequireJS + SASS + Jasmine Boilerplate
 
-Backbonejs/Requirejs based boilerplate.
+Vuejs/Requirejs based boilerplate.
 
 ## Installation
 

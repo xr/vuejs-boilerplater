@@ -1,9 +1,9 @@
 {
-  "name": "SPA-boilerplate",
+  "name": "Vue-boilerplate",
   "authors": [
     "liang guo <guoliang1222@gmail.com>"
   ],
-  "description": "SPA boilerplate",
+  "description": "Vue boilerplate",
   "main": "",
   "moduleType": [
     "amd"
@@ -23,6 +23,7 @@
     "requirejs": "~2.1.22"
   },
   "devDependencies": {
-    "text": "requirejs-text#~2.0.14"
+    "text": "requirejs-text#~2.0.14",
+    "vue": "~1.0.10"
   }
 }
