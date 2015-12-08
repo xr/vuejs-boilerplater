@@ -10,6 +10,8 @@ var app = express(),
 
 // exception, serve the components
 app.use('/components', express.static(__dirname + '/../components'))
+app.use('/test', express.static(__dirname + '/../test'))
+app.use('/client', express.static(__dirname + '/../client'))
 app.use(express.static(filePath));
 
 app.listen(3000, function () {

@@ -6,10 +6,12 @@ require.config({
 		Vue: '../../components/vue/dist/vue.min',
 		views: 'views',
 		models: 'models',
-		vm: 'view_models'
+		vm: 'view_models',
+		spec: '../../test/spec'
 	}
 });
 
 require(['jquery', 'vm/site_layout'], function ($, SiteLayout) {
 	var layout = new SiteLayout().$mount('#app-area');
+	return layout;
 });

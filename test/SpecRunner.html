@@ -6,21 +6,40 @@
 
   <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.0/jasmine_favicon.png">
   <link rel="stylesheet" href="lib/jasmine-2.4.0/jasmine.css">
-
+  <style>
+    div#test-area {
+      display: none;
+    }
+  </style>
+  <!-- requirejs -->
+  <script src="../components/requirejs/require.js"></script>
   <script src="lib/jasmine-2.4.0/jasmine.js"></script>
   <script src="lib/jasmine-2.4.0/jasmine-html.js"></script>
   <script src="lib/jasmine-2.4.0/boot.js"></script>
 
-  <!-- include source files here... -->
-  <script src="src/Player.js"></script>
-  <script src="src/Song.js"></script>
+  <script>
+    require.config({
+      baseUrl: '../client/app',
+      paths: {
+        jquery: '../../components/jquery/dist/jquery.min',
+        text: '../../components/text/text',
+        Vue: '../../components/vue/dist/vue.min',
+        views: 'views',
+        models: 'models',
+        vm: 'view_models',
+        spec: '../../test/spec'
+      }
+    });
 
-  <!-- include spec files here... -->
-  <script src="spec/SpecHelper.js"></script>
-  <script src="spec/PlayerSpec.js"></script>
-
+    require(['spec/main'], function (main) {
+      jasmine.getEnv().execute();
+    });
+  </script>
 </head>
 
 <body>
+  <div id="test-area">
+    <div id="app-area"></div>
+  </div>
 </body>
 </html>
